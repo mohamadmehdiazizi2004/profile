@@ -1,82 +1,148 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+    android:id="@+id/main_scroll"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center"
-    android:padding="24dp"
-    android:background="#FFF8E1">
+    android:fillViewport="true"
+    android:background="#F0DE3F"
+    tools:context=".ProfileActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="613dp"
-        android:layout_gravity="center"
-        android:layout_margin="30sp"
-        android:elevation="20dp"
-        android:gravity="center_horizontal"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="55dp">
+        android:gravity="center_horizontal"
+        android:padding="24dp">
 
-        <ImageView
-            android:id="@+id/profile_image"
-            android:layout_width="200dp"
-            android:layout_height="200dp"
-            android:layout_marginBottom="30dp"
-            android:scaleType="centerCrop"
-            android:src="@mipmap/images" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="start|center_vertical"
+            android:paddingVertical="8dp"
+            android:paddingHorizontal="4dp"
+            android:background="#72D7E4">
 
-        <TextView
-            android:id="@+id/profile_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
-            android:text="محمد مهدی عزیزی"
-            android:textColor="#258586"
-            android:textSize="28dp"
-            android:textStyle="bold"
-            tools:ignore="HardcodedText" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="my profile"
+                android:textColor="#141314"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-medium" />
+        </LinearLayout>
 
-        <TextView
-            android:id="@+id/profile_email"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
-            android:text="azim75599@gmail.com"
-            android:textColor="#258586"
-            android:textSize="18sp"
-            android:textStyle="bold" />
+            android:layout_gravity="center"
+            android:layout_margin="20dp"
+            android:elevation="10dp"
+            android:background="#FBC116"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="40dp">
 
-        <TextView
-            android:id="@+id/profile_phone"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
-            android:text="09900038848"
-            android:textColor="#258586"
-            android:textSize="18sp"
-            android:textStyle="bold" />
+            <ImageView
+                android:id="@+id/profile_image"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:layout_marginBottom="24dp"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/profile"
+                android:background="@drawable/profile_card_bg"
+                android:padding="4dp" />
 
-        <TextView
-            android:id="@+id/profile_university"
-            android:layout_width="wrap_content"
+            <TextView
+                android:id="@+id/profile_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="mohamad mehdi azizi"
+                android:textColor="#070707"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/profile_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:text="azim75599@gmail.com"
+                android:textColor="#0F1010"
+                android:textSize="18sp"
+                android:fontFamily="sans-serif" />
+
+            <TextView
+                android:id="@+id/profile_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:fontFamily="sans-serif"
+                android:text="09900038848"
+                android:textColor="#040404"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/profile_university"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:text="University of Amirkabir"
+                android:textColor="#121212"
+                android:textSize="18sp"
+                android:fontFamily="sans-serif" />
+
+            <TextView
+                android:id="@+id/address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Arak"
+                android:textColor="#121111"
+                android:textSize="18sp"
+                android:fontFamily="sans-serif" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="362dp"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
-            android:text="university of amirkabir"
-            android:textColor="#258586"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-        <TextView
-            android:id="@+id/address"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
-            android:text="arak"
-            android:textColor="#258586"
-            android:textSize="18sp"
-            android:textStyle="bold" />
+            android:layout_marginTop="10dp"
+            android:background="#72D7E4"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="16dp">
+
+            <Button
+                android:id="@+id/btn_edit"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:layout_weight="1"
+                android:backgroundTint="#43A047"
+                android:fontFamily="sans-serif-medium"
+                android:text="Edit profile"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/btn_logout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:layout_weight="1"
+                android:backgroundTint="#E53935"
+                android:fontFamily="sans-serif-medium"
+                android:text="Exit"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp" />
+        </LinearLayout>
 
     </LinearLayout>
-
-</LinearLayout>
+</ScrollView>
